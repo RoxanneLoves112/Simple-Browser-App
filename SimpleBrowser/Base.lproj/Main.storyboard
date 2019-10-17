@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ueI-mg-97m">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ose-rv-zzO">
+            <objects>
+                <navigationController toolbarHidden="NO" id="ueI-mg-97m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K9d-BT-VFt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="muI-4u-zwV">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wwy-AX-Zyf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JsO-g6-xA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1225" y="-75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUn-ie-4bU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="&lt;" id="nTU-Yu-Qlc">
+                            <connections>
+                                <action selector="backTapped:" destination="BYZ-38-t0r" id="Neq-Fk-Hxi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="48" style="plain" systemItem="fixedSpace" id="XGZ-1D-tAp"/>
+                        <barButtonItem title="&gt;" width="55" id="uTP-I0-8gZ">
+                            <connections>
+                                <action selector="forwardTapped:" destination="BYZ-38-t0r" id="hxP-p6-4hk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="47" style="plain" systemItem="fixedSpace" id="RSK-k6-duh"/>
+                        <barButtonItem systemItem="action" id="1yD-lO-ETw">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="yOR-oG-p05"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="64" style="plain" systemItem="fixedSpace" id="Bud-LS-2hZ"/>
+                        <barButtonItem systemItem="refresh" id="TaC-Jv-G4Q">
+                            <connections>
+                                <action selector="refreshTapped:" destination="BYZ-38-t0r" id="p2g-oc-Qc2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="59" style="plain" systemItem="fixedSpace" id="NcG-zQ-00o"/>
+                        <barButtonItem systemItem="stop" id="1rS-93-xLH">
+                            <connections>
+                                <action selector="stopTapped:" destination="BYZ-38-t0r" id="4M0-YP-63m"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="wzE-wF-qxm">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" id="svU-XE-2FO">
+                            <rect key="frame" x="54.5" y="7" width="305" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="BYZ-38-t0r" id="qL7-fO-Qe7"/>
+                            </connections>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="kLw-lF-p8X">
+                            <connections>
+                                <action selector="goTapped:" destination="BYZ-38-t0r" id="Q6u-2D-oIa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="action" destination="1yD-lO-ETw" id="j5h-3o-3Ma"/>
+                        <outlet property="back" destination="nTU-Yu-Qlc" id="bH3-Gz-hil"/>
+                        <outlet property="forward" destination="uTP-I0-8gZ" id="wm5-lP-8cW"/>
+                        <outlet property="go" destination="kLw-lF-p8X" id="gs7-lt-1KN"/>
+                        <outlet property="locationField" destination="svU-XE-2FO" id="YZb-A9-oLB"/>
+                        <outlet property="refresh" destination="TaC-Jv-G4Q" id="x4c-0U-iZ2"/>
+                        <outlet property="stop" destination="1rS-93-xLH" id="cuY-Xj-Bzh"/>
+                        <outlet property="webView" destination="MUn-ie-4bU" id="Axk-ei-4fF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="-28"/>
+        </scene>
+    </scenes>
+</document>
